@@ -9,7 +9,7 @@ public class Main {
         determinesPhoneAppVersion(0, 2015);
 
         System.out.println("Task 3");
-        calculationCardDeliveryDays(95);
+        System.out.println(calculationCardDeliveryDays(95));
     }
 
     //task 1
@@ -48,21 +48,16 @@ public class Main {
     }
 
     //task3
-    public static void calculationCardDeliveryDays(int deliveryDistance) {
-        int deliveryDays = 0;
-        if (deliveryDistance <= 100) {
-            if (deliveryDistance > 20) {
-                deliveryDays +=  1;
-            }
-            if (deliveryDistance > 60) {
-                deliveryDays +=  1;
-            }
-            if (deliveryDistance <= 100) {
-                deliveryDays +=  1;
-            }
-            System.out.println("Потребуется дней " + deliveryDays);
+    public static int calculationCardDeliveryDays(int deliveryDistance) {
+        if (deliveryDistance <= 20) {
+            return 1;
+        } else if (deliveryDistance < 60) {
+            return 2;
+        } else if (deliveryDistance < 100) {
+            return 3;
         } else {
-            System.out.println("Доставки нет");
+            return -1;
+            //System.out.println("Доставки нет");
         }
     }
 }
