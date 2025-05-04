@@ -6,7 +6,10 @@ public class Main {
         DeterminesLeapYear(2021);
 
         System.out.println("Task 2");
-        phoneAppVersion(0,2015);
+        DeterminesPhoneAppVersion(0, 2015);
+
+        System.out.println("Task 3");
+        calculationCardDeliveryDays(95);
     }
 
     //task 1
@@ -24,7 +27,7 @@ public class Main {
     }
 
     //task2
-    public static void phoneAppVersion(int clienOS, int clientDeviceYear) {
+    public static void DeterminesPhoneAppVersion(int clienOS, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
         if (clienOS == 1) {
             if (clientDeviceYear >= currentYear) {
@@ -43,5 +46,24 @@ public class Main {
             }
         }
 
+    }
+
+    //task3
+    public static void calculationCardDeliveryDays(int deliveryDistance) {
+        int deliveryDays = 0;
+        if (deliveryDistance <= 100) {
+            if (deliveryDistance > 20) {
+                deliveryDays +=  1;
+            }
+            if (deliveryDistance > 60) {
+                deliveryDays +=  1;
+            }
+            if (deliveryDistance <= 100) {
+                deliveryDays +=  1;
+            }
+            System.out.println("Потребуется дней " + deliveryDays);
+        } else {
+            System.out.println("Доставки нет");
+        }
     }
 }
