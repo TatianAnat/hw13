@@ -3,17 +3,17 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Task 1");
-        DeterminesLeapYear(2021);
+        determinesLeapYear(2021);
 
         System.out.println("Task 2");
-        DeterminesPhoneAppVersion(0, 2015);
+        determinesPhoneAppVersion(0, 2015);
 
         System.out.println("Task 3");
         calculationCardDeliveryDays(95);
     }
 
     //task 1
-    public static void DeterminesLeapYear(int year) {
+    public static void determinesLeapYear(int year) {
 
         if (year > 1584) {
             if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
@@ -27,7 +27,7 @@ public class Main {
     }
 
     //task2
-    public static void DeterminesPhoneAppVersion(int clienOS, int clientDeviceYear) {
+    public static void determinesPhoneAppVersion(int clienOS, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
         if (clienOS == 1) {
             if (clientDeviceYear >= currentYear) {
